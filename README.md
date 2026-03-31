@@ -1,4 +1,6 @@
-# 🎫 Helpdesk Ticketing API (Authors: Devesh, Himanshu, Tanish)
+# 🎫 Helpdesk Ticketing API
+
+**Authors:** Devesh, Himanshu, Tanish
 
 A FastAPI-based backend system for managing support tickets with features like ticket creation, assignment, status tracking, and filtering.
 
@@ -29,29 +31,26 @@ A FastAPI-based backend system for managing support tickets with features like t
 
 ## 📂 Project Structure
 
+```bash
 support_ticket_system/
 │── app/
-│ ├── routes/
-│ │ ├── auth.py
-│ │ ├── tickets.py
-│ │ ├── comments.py
-│ ├── crud.py
-│ ├── database.py
-│ ├── models.py
-│ ├── schemas.py
-│ ├── main.py
+│   ├── routes/
+│   │   ├── auth.py
+│   │   ├── tickets.py
+│   │   ├── comments.py
+│   ├── crud.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── main.py
 │
 │── Dockerfile
 │── requirements.txt
 │── README.md
 
----
-
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the repository
-
-```bash
+1️⃣ Clone the repository
 git clone https://github.com/YOUR_USERNAME/support_ticket_system.git
 cd support_ticket_system
 
