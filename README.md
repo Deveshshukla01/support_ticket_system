@@ -51,15 +51,20 @@ support_ticket_system/
 
 ## ⚙️ Installation & Setup
 
+```bash
+
 1️⃣ Clone the repository
+
 git clone https://github.com/YOUR_USERNAME/support_ticket_system.git
 cd support_ticket_system
 
 2️⃣ Run locally
+
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 
 3️⃣ Run with Docker
+
 docker build -t ticket-api .
 docker run -d -p 8000:8000 ticket-api
 📌 API Docs
@@ -67,7 +72,5 @@ docker run -d -p 8000:8000 ticket-api
 Swagger UI available at:
 
 http://localhost:8000/docs
-
-```
 
 ```
