@@ -16,3 +16,12 @@ class Ticket(Base):
     title = Column(String)
     description = Column(Text)
     user_id = Column(Integer, ForeignKey("users.id"))
+    status = Column(String, default="open")
+    agent_id = Column(Integer, nullable=True)
+
+class Comment(Base):
+    __tablename__ = "comments"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    content = Column(String)
+    ticket_id = Column(Integer)

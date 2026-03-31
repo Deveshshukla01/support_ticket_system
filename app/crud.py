@@ -38,3 +38,30 @@ def create_ticket(db: Session, ticket, user_id: int):
     db.commit()
     db.refresh(db_ticket)
     return db_ticket
+
+def get_all_tickets(db: Session):
+    return db.query(models.Ticket).all()
+
+def get_ticket_by_id(db: Session, ticket_id: int):
+    return db.query(models.Ticket).filter(models.Ticket.id == ticket_id).first()
+
+def assign_ticket(db: Session, ticket_id: int, agent_id: int):
+    ticket = db.query(models.Ticket).filter(models.Ticket.id == ticket_id).first()
+    
+    if ticket:
+        ticket.agent_id = agent_id
+        db.commit()
+    
+    return ticket
+
+def update_ticket_status(db: Session, ticket_id: int, status: str):
+    ticket = db.query(models.Ticket).filter(models.Ticket.id == ticket_id).first()
+    
+    if ticket:
+        ticket.status = status
+        db.commit()
+    
+    return ticket
+
+def filter_tickets(db: Session, status: str):
+    return db.query(models.Ticket).filter(models.Ticket.status == status).all()
