@@ -1,0 +1,126 @@
+{
+  "info": {
+    "_postman_id": "c2a447f6-5761-42ad-9c24-a81a130cd867",
+    "name": "Helpdesk Ticketing API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53633591"
+  },
+  "item": [
+    {
+      "name": "Create Ticket",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Create Ticket",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Login Issue\",\r\n  \"description\": \"Unable to login\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/tickets",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "tickets"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "date",
+              "value": "Tue, 31 Mar 2026 09:20:42 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "41"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Ticket created successfully\"\n}"
+        },
+        {
+          "name": "Create Ticket",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Login Issue\",\r\n  \"description\": \"Unable to login\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/tickets/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "tickets",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "date",
+              "value": "Tue, 31 Mar 2026 09:23:42 GMT"
+            },
+            {
+              "key": "server",
+              "value": "uvicorn"
+            },
+            {
+              "key": "content-length",
+              "value": "106"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"user_id\": 1,\n    \"id\": 1,\n    \"agent_id\": null,\n    \"status\": \"open\",\n    \"title\": \"Login Issue\",\n    \"description\": \"Unable to login\"\n}"
+        }
+      ]
+    }
+  ]
+}
