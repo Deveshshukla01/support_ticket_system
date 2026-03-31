@@ -47,6 +47,7 @@ support_ticket_system/
 │── Dockerfile
 │── requirements.txt
 │── README.md
+```
 
 ## ⚙️ Installation & Setup
 
@@ -58,7 +59,6 @@ cd support_ticket_system
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 
-
 3️⃣ Run with Docker
 docker build -t ticket-api .
 docker run -d -p 8000:8000 ticket-api
@@ -67,4 +67,7 @@ docker run -d -p 8000:8000 ticket-api
 Swagger UI available at:
 
 http://localhost:8000/docs
+
+```
+
 ```
