@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from database import engine, Base
-import auth, tickets
+from app.database import engine, Base
+from app.routes import auth, tickets
 
 Base.metadata.create_all(bind=engine)
 
@@ -10,5 +10,5 @@ app.include_router(auth.router)
 app.include_router(tickets.router)
 
 @app.get("/")
-def home():
-    return {"message": "Support Ticket System API Running"}
+def read_root():
+    return {"message": "Helpdesk Ticketing API Running"}
