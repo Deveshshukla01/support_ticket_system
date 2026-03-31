@@ -77,13 +77,3 @@ def get_user_tickets(user_id: int, db: Session = Depends(get_db)):
         "message": "User tickets fetched successfully",
         "data": tickets
     }
-
-@router.delete("/tickets/{ticket_id}")
-def delete_ticket(ticket_id: int, db: Session = Depends(get_db)):
-    
-    ticket = crud.delete_ticket(db, ticket_id)
-
-    if not ticket:
-        raise HTTPException(status_code=404, detail="Ticket not found")
-
-    return {"message": "Ticket deleted successfully"}

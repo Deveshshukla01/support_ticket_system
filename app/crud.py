@@ -68,14 +68,3 @@ def filter_tickets(db: Session, status: str):
 
 def get_tickets_by_user(db: Session, user_id: int):
     return db.query(models.Ticket).filter(models.Ticket.user_id == user_id).all()
-
-def delete_ticket(db: Session, ticket_id: int):
-    ticket = db.query(models.Ticket).filter(models.Ticket.id == ticket_id).first()
-    
-    if not ticket:
-        return None
-
-    db.delete(ticket)
-    db.commit()
-    
-    return ticket
